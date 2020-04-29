@@ -1,0 +1,31 @@
+package trabalho_heranca01;
+
+public class TesterFuncionario {
+
+	public static void main(String[] args) {
+	
+		
+		System.out.println("***********************************"); 	
+        System.out.println("NomeAluno: Tiago Cruz. Matricula: 0050015584");
+        System.out.println("***********************************"); 	
+        
+		Funcionario f1=new Funcionario();
+		
+		 f1.setNome("Thomas");
+		 f1.setCpf("123456789-87");
+		 f1.setSalario(1000);
+		 	f1.getBonificacao();
+		 
+		Gerente g1=new Gerente();
+		
+		 g1.setNome("André");
+		 g1.setCpf("039649254-18");
+		 g1.setSalario(1000);
+         g1.setNumeroDeFuncionariosGerenciados(30);
+         	g1.autentica(123);
+         	g1.getBonificacao();
+        
+         	
+        
+    }
+}
