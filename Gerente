@@ -1,0 +1,42 @@
+package trabalho_heranca01;
+
+public class Gerente extends Funcionario {
+
+	//atributos
+		private int senhaEspecial;
+		private int numeroDeFuncionariosGerenciados;
+	
+	//construtor
+		public Gerente() {
+			this.setSenhaEspecial(123);
+		}
+		
+	//metodos
+		@Override
+		public void getBonificacao() {
+			System.out.println("Bonificação: "+((this.getSalario()*0.1)+1000));
+		}
+		
+		public void autentica(int senha) {
+			if(senha!=getSenhaEspecial())
+				System.out.println("Acesso negado!");
+			else 
+				System.out.println("Acesso liberado!");
+		}
+		
+	//getters & setters
+		public int getSenhaEspecial() {
+			return senhaEspecial;
+		}
+		public void setSenhaEspecial(int senhaEspecial) {
+			this.senhaEspecial = senhaEspecial;
+		}
+		public int getNumeroDeFuncionariosGerenciados() {
+			return numeroDeFuncionariosGerenciados;
+		}
+		public void setNumeroDeFuncionariosGerenciados(int numeroDeFuncionariosGerenciados) {
+			this.numeroDeFuncionariosGerenciados = numeroDeFuncionariosGerenciados;
+		}
+		
+	
+}
