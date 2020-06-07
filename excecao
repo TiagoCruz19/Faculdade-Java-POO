@@ -1,0 +1,50 @@
+package tratamento_excecao;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Calculo {
+
+	public static void main(String[] args) {
+		
+		//criando Scanner
+			Scanner entrada = new Scanner(System.in); 
+			
+		try{
+			//perguntando número ao usuario
+			System.out.println("Entre com um numero: ");
+			int num = entrada.nextInt();
+			
+			//imprimindo numero digitado
+				System.out.println("O numero lido é: "+num);
+			
+			//calculando resultado
+				int resultado = 1/num;
+			
+			//mostrando resultado
+				System.out.println("Resultado: "+resultado);
+				
+		//criando vetor
+			int[] vetor = new int[10];
+			vetor[0]=9;
+			vetor[10]=10;
+			
+		}
+		catch (InputMismatchException e) {
+			System.out.println("Não inserir caracteres que não sejam números!!");
+		}
+		catch(IndexOutOfBoundsException e) {
+			System.out.println("Você invadiu a área do vetor!!");
+		}
+		catch(ArithmeticException e) {
+			System.out.println("Um número não pode ser dividido por zero!!");
+		}
+		catch (Exception e) {
+			System.out.println("Erro Inesperado!!");
+		}
+		finally {
+			System.out.println("Fim do Programa!!");
+		}
+	}
+
+}
