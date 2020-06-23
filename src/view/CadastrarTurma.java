@@ -88,7 +88,7 @@ public class CadastrarTurma extends JFrame {
 					
 					controller.create(turma);
 					
-					resposta.setText("Turma Criado");
+					resposta.setText("Turma Criada");
 					
 				}
 			});
@@ -154,7 +154,7 @@ public class CadastrarTurma extends JFrame {
 					menu4.add(item4_3);
 						item4_3.setBackground(Cor_Back_itens);
 					
-				//ações
+				//aÃ§Ãµes
 						
 						//cadastrar
 						item1_1.addActionListener(new ActionListener()
